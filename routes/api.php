@@ -26,6 +26,7 @@ Route::post('login',[AuthController::class, 'login']);
 Route::middleware(['auth:sanctum'])->group(function(){
     Route::get('logout',[AuthController::class, 'logout']);
     
+    // Crud productos.
     Route::get('products',[ProductController::class, 'index']);
     Route::post('products',[ProductController::class, 'create']);
     Route::get('products/{id}',[ProductController::class, 'show']);
